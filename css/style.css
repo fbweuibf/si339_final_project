@@ -1,4 +1,10 @@
 
+html {
+    background-image: linear-gradient(to right top, #eda2cc, #e1ebce, #f4acc0, 
+    #f4ebf6, #e9ddf5, #ddd3f2,#b5b3f0, 
+    #b4b7e7, #a9b4ec, #b2c0ec, #b0c6ec);
+}
+
 a.skip-main {
     left: -999px;
     position: absolute;
@@ -64,6 +70,34 @@ nav li a {
     text-decoration: none; 
 }
 
+nav li i {
+    margin-right: 8px; /* Adds space between the icon and text */
+}
+
+nav ul {
+    display: flex;
+    justify-content: space-evenly; /* Distributes space evenly */
+}
+
+nav li {
+    list-style-type: none; /* Removes bullet points from list */
+}
+
+nav a {
+    text-decoration: none; /* Removes underline from links */
+    color: white; /* Sets text color */
+    padding: 10px 20px; /* Adds padding around the text */
+    display: flex; /* Ensures the icon and text align nicely */
+    align-items: center; /* Centers items vertically */
+}
+
+a:hover, a:focus {
+    background-color: #555; /* Changes background on hover/focus */
+    border-radius: 5px; /* Rounds the corners */
+}
+
+
+
 a:hover, a:focus {
     border-style: solid;
     border-radius: 20%;
@@ -104,13 +138,12 @@ h1 {
     font-weight: bold; 
     justify-content: flex-start;
     font-size: xx-large;
-    padding: 0px 0px 0px 24px;
+    padding: 0px 0px 0px 20px;
 }
 h2 {
     font-family: 'Gill Sans', sans-serif;
     font-weight: bold;
     font-size: x-large;
-    background-color: pink;
 }
 h3 {
     font-size: large; 

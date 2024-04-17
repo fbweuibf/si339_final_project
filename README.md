@@ -1,1 +1,2 @@
-# si339_final_project
+# ccp_starter_code
+Starter Code for your CCP 

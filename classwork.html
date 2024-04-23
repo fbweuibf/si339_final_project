@@ -5,9 +5,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="css/reset.css">
     <link rel="stylesheet" href="css/style.css">
-
     <title>Classwork</title>
-
 </head>
 <body>
     <header>
@@ -24,56 +22,43 @@
     </header>
 
     <main id="main">
-        <div>
-            <h2>Drawing & Observation</h2>
-            <div class="description"></div>
-            <h3>Nude croquis</h3>
-            <div>
-            <img src="images/nude_watercolor.jpg" width = "200" alt="watercolor">
-            <img src="images/nude_charcoal.jpg" width = "230" alt="charcoal">
-            <img src="images/nude_colored_pencil.jpg" width = "210" alt="nude">
-            <ul>
-                <li>medium: watercolor, charcoal, colored pencil paper</li>
-            </ul>
+        <h2>Drawing & Observation</h2>
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide"><img src="images/nude_watercolor.jpg" alt="watercolor"></div>
+                <div class="slide"><img src="images/nude_charcoal.jpg" alt="charcoal"></div>
+                <div class="slide"><img src="images/nude_colored_pencil.jpg" alt="nude"></div>
+                <div class="slide"><img src="images/outline.jpg" alt="outline"></div>
+                <div class="slide"><img src="images/glove.jpg" alt="glove"></div>
             </div>
-            <h3>Class Sketches</h3>
-            <div>
-            <img src="images/outline.jpg" width = "200" alt="outline">
-            <img src="images/glove.jpg" width = "400" alt="glove">
-            <ul>
-                <li>medium: watercolor, charcoal, colored pencil paper</li>
-            </ul>
-            </div>
+            <button class="prev" onclick="plusSlides(-1, 0)">&#10094;</button>
+            <button class="next" onclick="plusSlides(1, 0)">&#10095;</button>
         </div>
-
-        <div>
-            <h2>Methods of Inquiry</h2>
-            <div class="description"></div>
-            <h3>Taking Time Project</h3>
-            <div>
-            <img src="images/mbus.jpg" width = "400" alt="daily sketch 1">
-            <img src="images/party.jpg" width = "400" alt="daily sketch 2">
-            <img src="images/pocha.jpg" width = "400" alt="daily sketch 3">
-            <img src="images/alice_lloyd_view.jpg" width = "400" alt="daily sketch 4">
+        
+        <h2>Methods of Inquiry: Taking Time Project</h2>
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide"><img src="images/mbus.jpg" alt="daily sketch 1"></div>
+                <div class="slide"><img src="images/party.jpg" alt="daily sketch 2"></div>
+                <div class="slide"><img src="images/pocha.jpg" alt="daily sketch 3"></div>
+                <div class="slide"><img src="images/alice_lloyd_view.jpg" alt="daily sketch 4"></div>
             </div>
-            <ul>
-                <li>Taking the time to document the memories of everyday life</li>
-                <li> mixed medium: marker, pen, colored pencil, oil pastel on paper</li>
-            </ul>
-            <h3>Final Project</h3>
-            <div>
-            <img src="images/3d_baby.jpg" width = "300" alt="main piece">
-            <img src="images/3d_baby_slide.jpg" width = "295" alt="opened version">
-            <img src="images/3d_baby_side.jpg" width = "250" alt="side view">
-            <img src="images/baby_painting.jpg" width = "300" alt="underpainting">
-            <ul>
-                <li>Based on a Times Square Article about the societal intricacies of donor parenthood and women's reproductive health.</li>
-                <li> mixed medium: paper mache sculpture with string over acrylic on canvas</li>
-            </ul>
+            <button class="prev" onclick="plusSlides(-1, 1)">&#10094;</button>
+            <button class="next" onclick="plusSlides(1, 1)">&#10095;</button>
+        </div>
+        
+        <h2>Methods of Inquiry: Final Project</h2>
+        <div class="carousel">
+            <div class="slides">
+                <div class="slide"><img src="images/3d_baby.jpg" alt="main piece"></div>
+                <div class="slide"><img src="images/3d_baby_slide.jpg" alt="opened version"></div>
+                <div class="slide"><img src="images/3d_baby_side.jpg" alt="side view"></div>
+                <div class="slide"><img src="images/baby_painting.jpg" alt="underpainting"></div>
             </div>
+            <button class="prev" onclick="plusSlides(-1, 2)">&#10094;</button>
+            <button class="next" onclick="plusSlides(1, 2)">&#10095;</button>
         </div>
 
     </main>
-    
 </body>
 </html>

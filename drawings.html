@@ -10,7 +10,8 @@
 <body>
     <header>
         <nav>
-            <a class="skip-main" href="#main">Skip to main content</a>
+            <a class="skip-main" href="#content">Skip to main content</a>
+            <span class="nav-name">VAL</span>
             <ul>
                 <li><a href="index.html">Home</a></li>
                 <li><a href="paintings.html">Paintings</a></li>
@@ -20,75 +21,105 @@
         </nav>
         <h1>Drawings</h1>
     </header>
-    
-    <main id="main">
-        <h2>Product Development</h2>
-        <div>
+
+    <div class="directory">
+        <div class="button-item">
+            <a href="#product-development">
+                <div class="image-container">
+                    <img src="images/form_drawing.jpg" alt="Form Drawing" class="link-image">
+                </div>
+                <div class="label">Product Development</div>
+            </a>
+        </div>
+        <div class="button-item">
+            <a href="#digital-art">
+                <div class="image-container">
+                    <img src="images/digital.png" alt="Digital Art" class="link-image">
+                </div>
+                <div class="label">Digital Art Series</div>
+            </a>
+        </div>
+        <div class="button-item">
+            <a href="#colored-pencil">
+                <div class="image-container">
+                    <img src="images/colored_pencil_1.png" alt="Colored Pencil" class="link-image">
+                </div>
+                <div class="label">Colored Pencil</div>
+            </a>
+        </div>
+    </div>
+
+    <div id="content">
+        <section id="product-development" class="series">
+            <h2>Product Development</h2>
             <div class="description">
                 <div>
                     <h3>Form Drawing</h3>
-                    <img src="images/form_drawing.jpg" width="200" alt="form drawing">
-                    <ul>
-                        <li>medium: marker on paper</li>
-                    </ul>
+                    <img src="images/form_drawing.jpg" alt="form drawing">
+                    <h3>Medium: marker on paper</h3>
                 </div>
                 <div>
                     <h3>Iterations</h3>
-                    <img src="images/elephant_sketch.png" width="200" alt="elephant sketch">
-                    <ul>
-                        <li>medium: pen on paper</li>
-                    </ul>
+                    <img src="images/elephant_sketch.png" alt="elephant sketch">
+                    <h3>Medium: pen on paper</h3>
                 </div>
                 <div>
                     <h3>Final Product</h3>
-                    <img src="images/elephant_teapot.png" width="500" alt="elephant teapot">
-                    <ul>
-                        <li>medium: marker, pen, colored pencil on paper</li>
-                    </ul>
+                    <img src="images/elephant_teapot.png" alt="elephant teapot">
+                    <h3>Medium: marker, pen, colored pencil on paper</h3>
                 </div>
-            </div> 
-        </div> 
+            </div>
+        </section>
 
-        <!-- Digital Art Series Section -->
-        <h2>Digital Art Series</h2>
-        <div>
+        <section id="digital-art" class="series">
+            <h2>Digital Art Series</h2>
             <div class="description">
                 <div>
-                    <img src="images/digital.png" width="210" alt="digital 1">
-                    <ul>
-                        <li>Program: Procreate </li>
-                    </ul>
+                    <img src="images/digital.png" alt="digital art">
+                    <h3>Program: Procreate</h3>
                 </div>
                 <div>
-                    <img src="images/digital_2.jpg" width="200" alt="digital 2">
-                    <ul>
-                        <li>Program: Procreate </li>
-                    </ul>
+                    <img src="images/digital_2.jpg" alt="digital 2">
+                    <h3>Program: Procreate</h3>
                 </div>
-            </div> 
-        </div>
+            </div>
+        </section>
 
-        <!-- Colored Pencil Section -->
-        <h2>Colored Pencil</h2>
-        <div>
+        <section id="colored-pencil" class="series">
+            <h2>Colored Pencil</h2>
             <div class="description">
                 <div>
                     <h3>"A Poem for Small Things"</h3>
-                    <img src="images/colored_pencil_1.png" width="400" alt="poem for small things">
-                    <ul>
-                        <li>medium: colored pencil on paper</li>
-                    </ul>
+                    <img src="images/colored_pencil_1.png" alt="poem for small things">
+                    <h3>Medium: colored pencil on paper</h3>
                 </div>
                 <div>
                     <h3>Me-so Soup!</h3>
-                    <img src="images/self_portrait.png" width="400" alt="self portrait">
-                    <ul>
-                        <li>medium: colored pencil and collage on paper</li>
-                    </ul>
+                    <img src="images/self_portrait.png" alt="self portrait">
+                    <h3>Medium: colored pencil and collage on paper</h3>
                 </div>
-            </div> 
-        </div> 
-    </main>
-    
+            </div>
+        </section>
+    </div>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Go To Top</button>
+
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
 </body>
 </html>

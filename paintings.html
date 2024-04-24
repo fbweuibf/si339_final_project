@@ -9,18 +9,18 @@
 </head>
 <body>
     <header>
-        <nav id="nav">
-            <a class="skip-main" href="#main">Skip to main content</a>
+        <nav>
+            <a class="skip-main" href="#content">Skip to main content</a>
+            <span class="nav-name">VAL</span> 
             <ul>
                 <li><a href="index.html">Home</a></li>
-                <li><a href="paintings.html" class="current-page">Paintings</a></li>
+                <li><a href="paintings.html">Paintings</a></li>
                 <li><a href="drawings.html">Drawings</a></li>
                 <li><a href="classwork.html">Classwork</a></li>
             </ul>
         </nav>
+        <h1>Paintings</h1>
     </header>
-
-    <h1>Paintings</h1>
 
     <div class="directory">
         <div class="button-item">
@@ -49,92 +49,83 @@
         </div>
     </div>
     
-    
-    <main id="main">
-
-        <!-- Series: Eyes -->
-        <h2 id="series-eyes">Series: Eyes</h2>
-        <div>
-            <div class="description">
-                <div>
-                    <h3>Blind For Love</h3>
-                    <img src="images/Blind_for_Love.jpg" width="400" alt="main eye painting">
-                    <ul>
-                        <li>medium: acrylic on canvas</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Eye See</h3>
-                    <img src="images/Eye_See.png" width="600" alt="eye see painting">
-                    <ul>
-                        <li>medium: acrylic on wood panel </li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Eye Feel</h3>
-                    <img src="images/Eye_Feel.png" width="450" alt="eye feel painting">
-                    <ul>
-                        <li>medium: acrylic on wood panel</li>
-                    </ul>
-                </div>
+    <div id="content">
+        <section class="series" id="series-eyes">
+            <h2>Series: Eyes</h2>
+            <div>
+                <h3>Blind For Love</h3>
+                <img src="images/Blind_for_Love.jpg" alt="main eye painting">
+                <h3>Medium: acrylic on canvas</h3>
             </div>
-        </div> 
+            <div>
+                <h3>Eye See</h3>
+                <img src="images/Eye_See.png" alt="eye see painting">
+                <h3>Medium: acrylic on wood panel</h3>
+            </div>
+            <div>
+                <h3>Eye Feel</h3>
+                <img src="images/Eye_Feel.png" alt="eye feel painting">
+                <h3>Medium: acrylic on wood panel</h3>
+            </div>
+        </section>
+        
+        <section class="series" id="series-family">
+            <h2>Series: Family</h2>
+            <div>
+                <h3>House of Lees</h3>
+                <img src="images/House_of_Lees.png" alt="family paintings">
+                <h3>Medium: acrylic on board</h3>
+            </div>
+            <div>
+                <h3>Blooming Mom</h3>
+                <img src="images/Blooming_Mom.png" alt="mom painting">
+                <h3>Medium: acrylic on canvas</h3>
+            </div>
+            <div>
+                <h3>Our Serendipities</h3>
+                <img src="images/Our_Serendipities.png" alt="cousin painting">
+                <h3>Medium: acrylic on board</h3>
+            </div>
+        </section>
+        
+        <section class="more-works" id="more">
+            <h2>More</h2>
+            <div>
+                <h3>Escapism</h3>
+                <img src="images/Mural_Escapism.jpg" alt="mural on wall">
+                <h3>This is the biggest scale acrylic work I've ever done</h3>
+            </div>
+            <div>
+                <h3>The Consequences</h3>
+                <img src="images/climate_change.png" alt="ocean acidification art">
+                <h3>Medium: acrylic on wood</h3>
+            </div>
+            <div>
+                <h3>Sand-which is life?</h3>
+                <img src="images/sandwhich_is_life.png" alt="sandwich painting">
+                <h3>Medium: acrylic on panel</h3>
+            </div>
+        </section>
+    </div>
 
-        <!-- Series: Family -->
-        <h2 id="series-family">Series: Family</h2>
-        <div>
-            <div class="description">
-                <div>
-                    <h3>House of Lees</h3>
-                    <img src="images/House_of_Lees.png" width="400" alt="family paintings">
-                    <ul>
-                        <li>medium: acrylic on board</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Blooming Mom</h3>
-                    <img src="images/Blooming_Mom.png" width="400" alt="mom painting">
-                    <ul>
-                        <li>medium: acrylic on canvas</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Our Serendipities</h3>
-                    <img src="images/Our_Serendipities.png" width="400" alt="cousin painting">
-                    <ul>
-                        <li>medium: acrylic on board</li>
-                    </ul>
-                </div>
-            </div> 
-        </div> 
+    <button onclick="topFunction()" id="myBtn" title="Go to top">Go To Top</button>
 
-        <!-- More -->
-        <h2 id="more">More</h2>
-        <div>
-            <div class="description">
-                <div>
-                    <h3>Escapism</h3>
-                    <img src="images/Mural_Escapism.jpg" width="400" alt="mural on wall">
-                    <ul>
-                        <li>This is the biggest scale acrylic work I've ever done</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>The Consequences</h3>
-                    <img src="images/climate_change.png" width="500" alt="ocean acidification art">
-                    <ul>
-                        <li>medium: acrylic on wood</li>
-                    </ul>
-                </div>
-                <div>
-                    <h3>Sand-which is life?</h3>
-                    <img src="images/sandwhich_is_life.png" width="1000" alt="sandwich painting">
-                    <ul>
-                        <li>medium: acrylic on panel</li>
-                    </ul>
-                </div>
-            </div> 
-        </div> 
-    </main>
+    <script>
+        window.onscroll = function() {scrollFunction()};
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 20 || document.documentElement.scrollTop > 20) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        function topFunction() {
+            document.body.scrollTop = 0; 
+            document.documentElement.scrollTop = 0;
+        }
+    </script>
+
 </body>
 </html>

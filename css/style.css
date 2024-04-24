@@ -12,68 +12,32 @@ div {
     padding: 200px; 
 }
 
-.carousel {
-    position: relative;
-    max-width: 600px;
-    margin: 20px auto; 
-    overflow: hidden;
+#myBtn {
+    display: none; /* Hidden by default, and will be displayed on scroll */
+    position: fixed; /* Fixed/sticky position */
+    bottom: 20px; /* Place the button at the bottom of the page */
+    right: 30px; /* Place the button 30px from the right */
+    z-index: 99; /* Make sure it does not overlap */
+    border: none; /* No border */
+    outline: none; /* Remove outline */
+    background-color: pink; /* Set a pink background color */
+    color: black; /* White text color */
+    cursor: pointer; /* Pointer/hand icon */
+    padding: 15px; /* Some padding */
+    border-radius: 10px; /* Rounded corners */
+    font-size: 18px; /* Increase font size */
 }
 
-.carousel button {
-    cursor: pointer;
-    position: absolute;
-    top: 50%;
-    transform: translateY(-50%);
-    width: auto;
-    padding: 10px;
-    margin: 0;
-    color: white;
-    font-weight: bold;
-    font-size: 18px;
-    background-color: rgba(0, 0, 0, 0.6);
-    border: none; /* Removes border */
-    outline: none; /* Removes outline */
+#myBtn:hover {
+    background-color: #555; /* Add a dark-grey background on hover */
 }
 
-.carousel .prev {
-    left: 0;
-}
-
-.carousel .next {
-    right: 0;
-}
-
-.carousel button:hover {
-    background-color: rgba(0,0,0,0.8);
-}
-
-.slides {
-    display: flex;
-    width: 500%; /* Enough width to contain all slides side by side */
-    transition: transform 0.5s ease;
-}
-
-.slide {
-    flex: 0 0 20%; /* Each slide takes up 20% of the total .slides width */
-    display: flex;
-    justify-content: center;
-    align-items: center;
-}
-
-.slide img {
-    width: 100%; /* Makes images responsive within their container */
-    display: block;
-}
 
 .gallery {
     display: grid;
-    grid-template-columns: repeat(2, 1fr);
-    width: 90%;
+    grid-template-columns: repeat(3, 1fr);
+    grid-gap: 20px;
     padding: 20px;
-    grid-gap: 30px;
-    align-items: stretch;
-    justify-content: center;
-    justify-self: center;
     margin: auto;
 }
 
@@ -90,9 +54,9 @@ div {
 }
 
 .description h3, .description ul {
-    color: #333; 
-    margin-bottom: 10px; 
-    font-weight: bold;
+    margin: 10px 0;
+    font-weight: bold;  /* Making sure it's bold if that's a requirement */
+
 }
 
 .description ul {
@@ -213,23 +177,36 @@ main ul {
 }
 
 img {
-    align-content: center;
+    max-width: 100%;
+    height: auto;
+    display: block;
+    margin: 0 auto; 
 }
+
+.nav-name {
+    font-size: 1.5em; 
+    color: black; 
+    font-weight: bold;
+}
+
 nav {
+    display: flex;
     background-color: pink;
     padding: 1rem 2rem;
-    display: flex;
     justify-content: space-between; 
     align-items: center;
     position: sticky;
-    top: 0;
     z-index: 1000;
 }
+nav ul li {
+    padding: 0 0px; 
+}
+
 nav ul {
     display: flex;
-    justify-content: space-evenly;
-    align-items: center;
+    margin: 0;
     padding: 0;
+    list-style: none;
 }
 
 nav li {
@@ -244,6 +221,12 @@ nav a {
     border-radius: 5px;
     transition: background-color 0.3s, color 0.3s;
 }
+.nav-name {
+    margin-right: auto; 
+    font-size: 1.5em; 
+    color: black; 
+    font-weight: bold;
+}
 
 nav a:hover, nav a:focus {
     background-color: rgb(151, 16, 61);
@@ -255,11 +238,39 @@ nav a:hover, nav a:focus {
     color: rgb(151, 16, 61);
     font-weight: bold;
 }
+* {
+    box-sizing: border-box;
+}
 
 main > div {
     border: 1px solid #ccc;
     padding: 20px;
     background-color: #f9f9f9;
+    display: grid;
+    grid-template-columns: repeat(auto-fill, minmax(250px, 1fr)); 
+    grid-gap: 20px; 
+    align-items: center; 
+}
+
+main .description {
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    padding: 10px;
+    text-align: center; 
+}
+
+main .description img {
+    width: 100%;
+    height: auto; 
+    margin-bottom: 10px;
+}
+
+main .description ul {
+    list-style-type: none; /* Removes list styling */
+    padding: 0;
+    margin-top: 10px; /* Spacing above the list */
+    text-align: center; /* Centers the list text */
 }
 
 
@@ -277,6 +288,9 @@ h2 {
 h3 {
     font-family: 'Times New Roman', Times, serif, sans-serif;
     font-size: large;
+    font-size: 18px;
+    color: #333;
+    text-align: center;  /* Ensures text is centrally aligned if that's the desired layout */
 }
 
 header h1 {
@@ -370,19 +384,27 @@ header h2 {
     width: 1000px; 
 }
 .directory {
-    display: flex;
-    justify-content: center;
-    flex-wrap: wrap;
-    gap: 20px; /* Spacing between directory items */
+    display: flex; /* Using flexbox to align directory items in a single row */
+    justify-content: space-between; /* Evenly spacing the directory items */
+    align-items: center; /* Vertically centering the content within their containers */
+    padding: 10px;
+    margin: 0 auto; /* Centering the directory block horizontally */
+    max-width: 1200px; /* Optional: max width for large screens */
+    flex-wrap: nowrap; /* Preventing wrapping to the next line */
+}
+.directory a {
+    text-decoration: none; /* Removes underline from links */
+    color: inherit; /* Ensures links use the text color inherited from their parent */
 }
 
 .directory-item {
     text-align: center; /* Center-aligns the image and label */
-    width: 300px; /* Set a fixed width for consistency */
+    flex-grow: 1; /* Allows items to expand and occupy available space */
+    margin: 5px; /* Provides a small space between items */
+    box-shadow: 0 2px 5px rgba(0,0,0,0.1); 
 }
 .image-overlay {
     position: relative;
-    width: 100%; /* Ensure the overlay matches the image size */
     border-radius: 8px; /* Optional: rounds the corners of the image */
     overflow: hidden; /* Ensures nothing spills outside the border radius */
 }
@@ -403,8 +425,8 @@ header h2 {
 }
 
 .image-container {
-    width: 100%; /* Full width of the button */
-    height: 250px; /* Height set to maintain square shape for the image */
+    width: auto; /* Full width of the button */
+    height: 190px; /* Height set to maintain square shape for the image */
     display: flex;
     justify-content: center;
     align-items: center;
@@ -431,19 +453,19 @@ header h2 {
 }
 
 .link-image {
-    cursor: pointer; /* Indicates the image is clickable */
-    transition: transform 0.3s ease, box-shadow 0.3s ease; /* Smooth transition for effects */
+    cursor: pointer; 
+    transition: transform 0.3s ease, box-shadow 0.3s ease; 
     cursor: pointer;
-    box-shadow: 0 4px 8px rgba(0,0,0,0.2); /* Shadow for depth */
+    box-shadow: 0 4px 8px rgba(0,0,0,0.2); 
     display: block; 
-    max-width: 90%; /* Slightly smaller to maintain padding */
+    max-width: 90%; 
     max-height: 90%;
     object-fit: cover; 
 }
 
 .link-image:hover, .link-image:focus {
-    transform: scale(1.03); /* Slightly enlarges the image on hover */
-    box-shadow: 0 8px 16px rgba(0,0,0,0.4); /* Darker shadow on hover */
+    transform: scale(1.03); 
+    box-shadow: 0 8px 16px rgba(0,0,0,0.4); 
 }
 
 
@@ -454,7 +476,67 @@ header h2 {
     font-weight: bold;
 }
 
-@media (min-width:768px) {
+#content {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin: 20px;
+}
+
+#content section {
+    width: 100%; 
+    margin-bottom: 40px; 
+}
+
+#content div {
+    text-align: center; 
+    margin-bottom: 20px; 
+}
+
+#content h2 {
+    font-size: 2em; 
+    margin-bottom: 10px; 
+}
+
+#content h3 {
+    margin-top: 10px; 
+    font-size: 1.2em; 
+    color: #333;
+}
+.section {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr)); /* Creates a responsive grid with columns that have a minimum width of 250px */
+    gap: 20px; /* Sets space between grid items */
+    padding: 20px; /* Adds padding inside each section for spacing from edges */
+    align-items: start; /* Aligns items at the start of each grid cell */
+    margin-bottom: 40px; /* Adds space between sections */
+}
+
+.series img {
+    width: 80%; /* Adjust based on preference, 80% for some padding around the image */
+    margin-bottom: 20px; /* Adds space between images and any following text or image */
+}
+
+
+.series{
+    width: auto;
+    margin-bottom: 40px;
+}
+
+.series h3{
+    text-align: center;
+    margin-bottom: 20px;
+}
+
+img {
+    max-width: 80%; /* Limits the max width to 80% of its parent */
+    height: auto; /* Keeps the aspect ratio of the image */
+    display: block; /* Ensures images are block level to accept margin auto */
+    margin: 0 auto; /* Centers the image horizontally */
+}
+
+
+@media (min-width:768px){
     img {
         max-width: 100%; /* Ensures images are fully responsive */
     }
@@ -468,49 +550,81 @@ header h2 {
     * {
         padding: 20px; /* Provides ample space for interaction */
     }
-    nav {
-        justify-content: flex-end; /* Aligns nav items to the right */
-    }
     .grid, .grid2 {
         display: grid;
-        grid-template-columns: repeat(2, 1fr); /* Two columns for better space utilization */
+        grid-template-columns: repeat(2, 1fr); 
     }
     .first, .description {
         display: flex;
-        align-items: center; /* Ensures vertical alignment is centered */
+        align-items: center; 
     }
     .flexpro {
         display: flex;
-        align-items: center; /* Aligns items flexibly and centered */
-        padding-top: 24px; /* Adds space above flex items */
-    }
-    main {
-        padding: 20px; /* Consistent padding around the main content */
-    }
-}
-
-@media (min-width:1024px) {
-    nav {
-        justify-content: center; /* Centers navigation items */
+        align-items: center; 
+        padding-top: 24px;
     }
     .sticky {
         position: fixed;
         top: 0;
         width: 100%;
-        z-index: 100; /* Keeps navbar on top */
+        z-index: 100; 
     }
-    .sticky + body {
-        padding-top: 60px; /* Adds space under the sticky nav */
+    .profile-container {
+        flex-direction: row; 
     }
-    .grid {
-        grid-template-columns: repeat(4, 1fr); /* Four columns for larger screens */
+    .headshot-container img {
+        width: 200px; 
+        height: 200px;
     }
-    .grid2 {
-        grid-template-columns: repeat(3, 1fr); /* Three columns for secondary grids */
+
+    .social-links {
+        flex-direction: row; /* Horizontal layout for social links on larger screens */
+        justify-content: center; /* Centering links */
+    }
+}
+
+
+@media (min-width:1024px) {
+    .gallery {
+        grid-template-columns: repeat(3, 1fr);  /* Adjust to 3 columns for larger screens */
     }
     .description img {
-        max-width: 100%; /* Ensures image scaling is responsive */
+        width: 90%; /* Slightly less than full width for aesthetics */
+        max-height: 600px; /* Maximum height to avoid overly tall images */
+        object-fit: cover; /* Covers the area of the div without distorting */
     }
+    img {
+        width: auto;
+        max-height: 80vh; 
+        object-fit: cover;
+    }
+    .description {
+        width: 95%; 
+        margin: auto; 
+    }
+    .description img {
+        max-width: 100%; 
+    }
+    * {
+        padding: 20px; 
+    }
+
+    nav {
+        justify-content: center; 
+    }
+    nav ul {
+        justify-content: space-between; 
+    }
+    .sticky {
+        position: fixed;
+        top: 0;
+        width: 100%;
+        z-index: 100; 
+    }
+    .sticky + body {
+        padding-top: 60px; 
+    }
+
 }
 
 @keyframes page-title {

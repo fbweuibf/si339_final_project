@@ -1,48 +1,36 @@
-xwindow.onscroll = function() {
-	make_sticky()
-  };
-  
-  var navbar = document.querySelector("nav");
-  var sticky = navbar.offsetTop;
-  
-  function make_sticky() {
-	if (window.scrollY >= sticky + 5) {
-	  navbar.classList.add("sticky")
-	}
-	else {
-	  navbar.classList.remove("sticky");
-	}
-  }
 
+document.addEventListener('DOMContentLoaded', () => {
+    const carousels = document.querySelectorAll('.carousel');
+    
+    carousels.forEach((carousel, index) => {
+        let currentSlide = 1;
+        const slides = carousel.querySelectorAll('.slide');
 
-<script>
+        // Show the first slide initially
+        showSlides(currentSlide, slides);
 
-var slideIndices = [1, 1, 1]; 
-var carouselClass = "carousel"; 
+        // Set event listeners for navigation buttons
+        carousel.querySelector('.prev').addEventListener('click', () => {
+            currentSlide = changeSlide(currentSlide - 1, slides);
+        });
 
-function setupCarousels() {
-    // Initialize all carousels
-    var carousels = document.getElementsByClassName(carouselClass);
-    for (var i = 0; i < carousels.length; i++) {
-        showSlides(1, i); // Set the first slide to display for each carousel
-    }
-}
+        carousel.querySelector('.next').addEventListener('click', () => {
+            currentSlide = changeSlide(currentSlide + 1, slides);
+        });
 
-function plusSlides(n, carouselNumber) {
-    // Change slide by n slides forward/backward in carouselNumber
-    showSlides(slideIndices[carouselNumber] += n, carouselNumber);
-}
+        function changeSlide(n, slides) {
+            // If n is out of bounds, wrap it around
+            if (n > slides.length) n = 1;
+            if (n < 1) n = slides.length;
+            showSlides(n, slides);
+            return n;
+        }
 
-function showSlides(n, carouselNumber) {
-    var i;
-    var slides = document.querySelectorAll("." + carouselClass + "[data-carousel='" + carouselNumber + "'] .slide");
-    if (n > slides.length) { slideIndices[carouselNumber] = 1 }
-    if (n < 1) { slideIndices[carouselNumber] = slides.length }
-    for (i = 0; i < slides.length; i++) {
-        slides[i].style.display = "none";
-    }
-    slides[slideIndices[carouselNumber] - 1].style.display = "block";
-}
-
-document.addEventListener("DOMContentLoaded", setupCarousels);
-</script>
+        function showSlides(n, slides) {
+            slides.forEach(slide => {
+                slide.style.display = 'none';
+            });
+            slides[n - 1].style.display = 'block';
+        }
+    });
+});
